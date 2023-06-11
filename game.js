@@ -16,10 +16,14 @@ function nextSequence() {
 }
 
 function startGame() {
+    if(gameStarted){
+      window.alert("The game is already started!");
+      level = currentLevel;
+    }
     gameStarted = true;
     nextSequence();
-}
-
+    }
+    
 function startOver() {
     level = 0;
     gamePattern = [];
